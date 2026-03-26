@@ -146,3 +146,4 @@ MIT License
 ### Шаг 3: Нажмите «Commit changes»
 
 Прокрутите вниз, напишите сообщение коммита:
+Ссылка на сайт: https://kuksenkonikodim.github.io/room-booking-service/
