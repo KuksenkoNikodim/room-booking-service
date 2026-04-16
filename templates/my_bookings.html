@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">📋 Мои бронирования</h1>
+
+<div class="card">
+    <div class="card-body">
+        {% if bookings %}
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Комната</th>
+                        <th>Дата</th>
+                        <th>Время</th>
+                        <th>Назначение</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for booking in bookings %}
+                    <tr>
+                        <td>{{ booking.room.name }}</td>
+                        <td>{{ booking.date }}</td>
+                        <td>{{ booking.start_time }} - {{ booking.end_time }}</td>
+                        <td>{{ booking.purpose }}</td>
+                        <td>
+                            <a href="/cancel-booking/{{ booking.id }}" 
+                               class="btn btn-danger btn-sm"
+                               onclick="return confirm('Отменить бронирование?')">
+                                Отменить
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="text-muted">У вас пока нет бронирований</p>
+        <a href="/" class="btn btn-primary">Забронировать комнату</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
