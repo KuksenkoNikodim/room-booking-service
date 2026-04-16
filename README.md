@@ -7,7 +7,7 @@
 Группа ИС 21
 Усть-Лабинский социально-педагогический колледж
 
-Ссылка на приложение : http://localhost:5000/
+Ссылка на приложение : room-booking-service-production.up.railway.app
 
 📄 Лицензия
 MIT License
